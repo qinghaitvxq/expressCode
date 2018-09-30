@@ -1,12 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    <h2>hello world</h2>
-</body>
-</html>
+<script src="/jquery.js" ></script>
+<script>
+    const ourRequest = $.ajax({
+        method:"POST",
+        url:"http://localhost:3003/ajax",
+        dataType:"json",
+        data:{
+            name:"Rob"
+        }
+    })
+    ourRequest.then((res)=>{
+        console.log(1111);
+        console.log(res);
+    })
+</script>
